@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu Site Pessoal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Bem-vindo ao Meu Site Pessoal</h1>
+        <nav>
+            <a href="#sobre">Sobre Mim</a>
+            <a href="#portfolio">Portfólio</a>
+            <a href="#formacao">Formação</a>
+            <a href="#cursos">Cursos Adicionais</a>
+            <a href="#habilidades">Habilidades e Conhecimentos</a>
+            <a href="#idiomas">Idiomas</a>
+            <a href="#contato">Contato</a>
+        </nav>
+    </header>
+
+    <section id="sobre">
+        <h2>Sobre Mim</h2>
+        <p>Olá!!  Meu nome é Felipe Roberto Bacchi, sou estudante do curso de Ciências da Computação,este é meu site pessoal, onde compartilho informações sobre mim e meu trabalho.</p>
+        <p>Idade: 19 anos</p>
+        <p>Data de nascimento: 01/01/2006</p>
+    </section>
+
+    <section id="formacao">
+        <h2>Formação</h2>
+        <p>Graduação em Ciência da Computação (cursando) na Atitus Educação - Passo Fundo - RS</p>
+        <ul>
+            <li>Conceitos básicos de programação e computação</li>
+            <li>Pensamento Computacional</li>
+            <li>Desafio da Profissão</li>
+            <li>Inteligência Artificial e Análise de Dados</li>
+        </ul>
+    </section>
+
+    <section id="cursos">
+        <h2>Cursos Adicionais</h2>
+        <ul>
+            <li>2025 - Java COMPLETO: Do Zero ao Profissional + Projetos! (Em andamento) (77h) (Udemy)</li>
+            <li>2024 - Qualifica em Desenvolvimento de Aplicações Júnior (400h) (ATITUS Educação)</li>
+            <li>2024 - AWS Academy Graduate - AWS Academy Introduction to Cloud Semester 1 (60h) (Amazon)</li>
+            <li>2023-2024 - Programa Vereador Jovem vai à Câmara</li>
+            <li>2023 - Comunicação e Oratória (10h) (Luciane Lovatto De Matos)</li>
+            <li>2023 - Curso Insert - Pensamento Computacional Módulo 1, 2 e 3 (18h) (Enter Tech Edu)</li>
+            <li>2022 - Olimpíada Nacional de Ciências (MCTI Ministério da Ciência, Tecnologia e Inovações)</li>
+            <li>2021 - Desafio da Robótica I (30h) (Projeteiros)</li>
+            <li>2019-2024 - Curso de Liderança Juvenil Cristã (CLJ)</li>
+        </ul>
+    </section>
+
+    <section id="habilidades">
+        <h2>Habilidades e Conhecimentos</h2>
+        <ul>
+            <li>Resolução de problemas de forma inovadora</li>
+            <li>Conhecimento em Python, HTML, CSS, Java, JavaScript, Modelagem 3D, GIT e AWS</li>
+            <li>Conhecimento em Algoritmos e Estruturas de Dados</li>
+            <li>Conhecimento em aplicativos como Autodesk Fusion, Virtual Machine, Visual Studio</li>
+        </ul>
+    </section>
+
+    <section id="experiencias">
+        <h2>Experiências</h2>
+        <ul>
+            <li>Trabalho no Laboratório Meridional em Passo Fundo</li>
+        </ul>
+    </section>
+
+    <section id="tetris">
+        <h2 style="display: flex; align-items: center; gap: 0.5rem;">
+            Jogo de Tetris
+            <button id="tetrisHelpBtn" title="Ajuda">?</button>
+        </h2>
+        <div id="tetrisHelpModal" style="display:none; position:fixed; top:0; left:0; width:100vw; height:100vh; background:#000a; z-index:1000; align-items:center; justify-content:center;">
+            <div style="background:#222; color:#fff; padding:2rem; border-radius:10px; max-width:90vw; max-height:80vh; overflow:auto; position:relative;">
+                <button id="closeTetrisHelp" style="position:absolute; top:0.5rem; right:0.5rem; background:none; border:none; color:#00ffcc; font-size:1.5rem; cursor:pointer;">&times;</button>
+                <h3>Comentário do Tetris</h3>
+                <div id="tetrisHelpContent">
+                    <p>O Tetris foi feito com boa parte do código com ajuda de IA. É apenas um jogo automático e infinito, não é interativo, mas achei que ficaria muito legal.</p>
+                </div>
+            </div>
+        </div>
+        <canvas id="tetrisCanvas" width="800" height="600" style="border: 1px solid black;"></canvas>
+    </section>
+
+    <section id="contato">
+        <h2>Contato</h2>
+        <p>Entre em contato comigo através do e-mail: <a href="mailto:feliperobertobacchi@gmail.com">feliperobertobacchi@gmail.com</a></p>
+        <p>Telefone: <a href="tel:+55 54984459655">+55 (54) 98445-9655</a></p>
+        <p>LinkedIn: <a href="https://www.linkedin.com/in/felipe-roberto-bacchi-535a92304/" target="_blank">Meu LinkedIn</a></p>
+        <p>GitHub: <a href="https://github.com/Felipe-Roberto-Bacchi" target="_blank">Meu GitHub</a></p>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Felipe Roberto Bacchi, ChatGPT. Todos os direitos reservados.</p>
+    </footer>
+    <script src="tetirs.js"></script>
+    <script>
+        document.getElementById('tetrisHelpBtn').onclick = function() {
+            document.getElementById('tetrisHelpModal').style.display = 'flex';
+        };
+        document.getElementById('closeTetrisHelp').onclick = function() {
+            document.getElementById('tetrisHelpModal').style.display = 'none';
+        };
+        document.getElementById('tetrisHelpModal').onclick = function(e) {
+            if (e.target === this) this.style.display = 'none';
+        };
+    </script>
+</body>
+</html>

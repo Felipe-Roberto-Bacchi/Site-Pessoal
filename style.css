@@ -1,0 +1,151 @@
+/* Reset e base */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(180deg, #1a1a1a 0%, #0d0d0d 100%);
+    color: #f0f0f0;
+    line-height: 1.6;
+}
+
+/* Cabeçalho */
+header {
+    background: #111;
+    color: #00ffcc;
+    padding: 2rem 0;
+    text-align: center;
+    box-shadow: 0 0 15px #00ffcc55;
+}
+
+/* Navegação */
+nav {
+    margin-top: 1rem;
+}
+nav a {
+    color: #00ffcc;
+    text-decoration: none;
+    margin: 0 1.2rem;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+nav a:hover {
+    color: #ffffff;
+}
+
+/* Seções */
+section {
+    background: rgba(255, 255, 255, 0.05);
+    margin: 2rem auto;
+    padding: 2rem;
+    max-width: 800px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px #000000aa;
+}
+
+section#experiencias {
+    margin-bottom: 2rem;
+}
+section#experiencias ul {
+    list-style-type: square;
+    padding-left: 1.5rem;
+}
+
+/* Títulos */
+section h2 {
+    color: #00ffcc;
+    border-bottom: 2px solid #00ffcc55;
+    padding-bottom: 0.5rem;
+}
+
+/* Listas */
+section ul {
+    list-style-type: square;
+    padding-left: 1.5rem;
+}
+
+/* Rodapé */
+footer {
+    background: #111;
+    color: #999;
+    text-align: center;
+    padding: 1rem 0;
+    margin-top: 3rem;
+    font-size: 0.9rem;
+}
+
+/* Canvas do Tetris */
+#tetrisCanvas {
+    display: block;
+    margin: 1rem auto;
+    border: 2px solid #00ffcc;
+    background-color: #000;
+}
+
+/* Links gerais */
+a {
+    color: #00ffcc;
+}
+
+/* Botão de interrogação */
+#tetrisHelpBtn {
+    font-family: inherit;
+    font-weight: bold;
+    border-radius: 50%;
+    width: 2rem;
+    height: 2rem;
+    line-height: 2rem;
+    text-align: center;
+    background: #fff;
+    color: #00bbaa;
+    border: 2px solid #00ffcc;
+    box-shadow: 0 2px 8px #00ffcc33;
+    cursor: pointer;
+    font-size: 1.5rem;
+    margin-left: 0.5rem;
+    transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+}
+#tetrisHelpBtn:hover {
+    background: #00ffcc;
+    color: #fff;
+    box-shadow: 0 0 12px #00ffcc88;
+}
+
+/* Modal de ajuda */
+#tetrisHelpModal {
+    display: none;
+    position: fixed;
+    top: 0; left: 0;
+    width: 100vw; height: 100vh;
+    background: #000a;
+    z-index: 1000;
+    align-items: center;
+    justify-content: center;
+}
+#tetrisHelpModal[style*="display: flex"] {
+    display: flex !important;
+}
+#tetrisHelpModal > div {
+    background: #222;
+    color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 90vw;
+    max-height: 80vh;
+    overflow: auto;
+    position: relative;
+    box-shadow: 0 0 20px #00ffcc55;
+}
+#closeTetrisHelp {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: none;
+    border: none;
+    color: #00ffcc;
+    font-size: 1.5rem;
+    cursor: pointer;
+}
